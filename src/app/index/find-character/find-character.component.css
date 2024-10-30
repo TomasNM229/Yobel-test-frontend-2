@@ -8,8 +8,7 @@
 }
 
 .character {
-  background-color: var(--mystery-gray);
-  border: 2px solid var(--kiwi-green);
+  background-color: rgba(128, 128, 128, 0.5); /* Cambia a un color gris transparente */
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -44,12 +43,13 @@
 .character-data h3 {
   font-size: 1.2em;
   margin: 0;
-  color: var(--blue);
+  color: var(--kiwi-green);
 }
 
 .character-data p {
   margin: 5px 0;
-  color: var(--calla-green);
+  color: var(--mystery-gray);
+  font-weight: 500;
 }
 
 .search-container {
@@ -59,31 +59,30 @@
 
 .search-container-inner {
   display: flex;
-  align-items: center; /* Alinea los elementos verticalmente */
+  align-items: center; 
 }
 
 .input-container {
-  position: relative; /* Necesario para posicionar el ícono */
+  position: relative;
 }
 
 input[type="text"] {
   width: 100%;
-  max-width: 600px;
-  height: 40px; /* Aumenté la altura para que sea más coherente */
-  padding: 10px 40px; /* Espacio para el ícono */
-  margin: 20px 0; /* Solo margen vertical */
-  border: 2px solid var(--cream);
+  max-width: 800px;
+  height: 40px; 
+  padding: 10px 40px; 
+  margin: 20px 0;
   border-radius: 8px;
   font-size: 1em;
   outline: none;
-  background-color: var(--mystery-gray);
-  color: var(--blue);
+  background-color: rgba(128, 128, 128, 0.5);
+  color: var(--kiwi-green);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.2s, border-color 0.2s;
 }
 
 input[type="text"]::placeholder {
-  color: var(--endo-green);
+  color: var(--kiwi-green);
 }
 
 input[type="text"]:focus {
@@ -93,11 +92,11 @@ input[type="text"]:focus {
 
 .search-icon {
   position: absolute;
-  left: 10px; /* Espacio desde el borde izquierdo */
+  left: 10px;
   top: 50%;
-  transform: translateY(-50%); /* Centra verticalmente el ícono */
-  color: var(--blue); /* Cambia el color según sea necesario */
-  pointer-events: none; /* Evita que el ícono interfiera con el clic en el input */
+  transform: translateY(-50%);
+  color: var(--kiwi-green);
+  pointer-events: none; 
 }
 
 .character-details-modal {
@@ -110,6 +109,7 @@ input[type="text"]:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000; 
 }
 
 .character-details {
@@ -117,8 +117,11 @@ input[type="text"]:focus {
   padding: 20px;
   border-radius: 8px;
   max-width: 400px;
+  width: 90%;
   position: relative;
   text-align: center;
+  overflow-y: auto;
+  max-height: 90%;
 }
 
 .close-button {
@@ -215,4 +218,15 @@ input[type="text"]:focus {
 .download-button:focus {
   outline: none; 
   box-shadow: 0 0 5px #45a049; 
+}
+
+@media (max-width: 600px) {
+  .character-details {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  .close-button {
+    font-size: 20px;
+  }
 }
