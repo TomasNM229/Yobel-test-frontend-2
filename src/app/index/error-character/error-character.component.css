@@ -1,35 +1,35 @@
 .error-container {
   text-align: center;
   margin-top: 50px;
-  border-radius: 10px; /* Bordes redondeados */
-  padding: 20px; /* Espaciado interno */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .error-container h2 {
-  color: var(--kiwi-green); /* Color del título de error en verde kiwi */
+  color: var(--kiwi-green);
 }
 
 .error-container p {
-  color: var(--kiwi-green); /* Color del texto de descripción en azul */
-  margin-bottom: 20px; /* Espaciado inferior */
+  color: var(--kiwi-green);
+  margin-bottom: 20px;
 }
 
 .btn-home {
-  background-color: var(--endo-green); /* Color de fondo del botón en verde */
-  color: white; /* Color del texto del botón */
-  border: none; /* Sin borde */
-  padding: 10px 20px; /* Espaciado interno */
-  text-align: center; /* Centrando el texto */
-  text-decoration: none; /* Sin subrayado */
-  display: inline-block; /* Mostrando como bloque en línea */
-  font-size: 16px; /* Tamaño de fuente */
-  margin: 4px 2px; /* Margen alrededor del botón */
-  cursor: pointer; /* Cambiando cursor al pasar el ratón */
-  border-radius: 5px; /* Bordes redondeados del botón */
-  transition: background-color 0.3s ease; /* Efecto de transición al cambiar de color */
+  background-color: var(--endo-green);
+  color: white; 
+  border: none; 
+  padding: 10px 20px; 
+  text-align: center; 
+  text-decoration: none;
+  display: inline-block; 
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 .btn-home:hover {
-  background-color: #60a85f; /* Color del botón al pasar el ratón (más oscuro) */
+  background-color: #60a85f;
 }
