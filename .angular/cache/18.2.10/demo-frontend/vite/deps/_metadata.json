@@ -1,0 +1,79 @@
+{
+  "hash": "20a858b1",
+  "configHash": "86f37df8",
+  "lockfileHash": "ecaa5f14",
+  "browserHash": "c24a1201",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "2c3f7e53",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "67317395",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "c8660ba2",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "881af796",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "d8a4ea87",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "b611d89a",
+      "needsInterop": false
+    },
+    "jspdf": {
+      "src": "../../../../../../node_modules/jspdf/dist/jspdf.es.min.js",
+      "file": "jspdf.js",
+      "fileHash": "7487f2f6",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "purify.es-W2QPG26O": {
+      "file": "purify__es-W2QPG26O.js"
+    },
+    "index.es-KV2ZT6NM": {
+      "file": "index__es-KV2ZT6NM.js"
+    },
+    "chunk-6LBJ747E": {
+      "file": "chunk-6LBJ747E.js"
+    },
+    "chunk-DJLP7MJN": {
+      "file": "chunk-DJLP7MJN.js"
+    },
+    "chunk-JD2BQQN5": {
+      "file": "chunk-JD2BQQN5.js"
+    },
+    "chunk-WUUVWCMF": {
+      "file": "chunk-WUUVWCMF.js"
+    },
+    "chunk-CBPXCV4Z": {
+      "file": "chunk-CBPXCV4Z.js"
+    },
+    "html2canvas.esm-VN2TC25E": {
+      "file": "html2canvas__esm-VN2TC25E.js"
+    },
+    "chunk-TXDUYLVM": {
+      "file": "chunk-TXDUYLVM.js"
+    }
+  }
+}

@@ -1,0 +1,177 @@
+
+/* Contenedor de los personajes */
+.characters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Estilo para cada tarjeta de personaje */
+  .character {
+    background-color: var(--mystery-gray);
+    border: 2px solid var(--kiwi-green);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .character:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Imagen de cada personaje */
+  .character-img {
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  /* Datos del personaje */
+  .character-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .character-data h3 {
+    font-size: 1.2em;
+    margin: 0;
+    color: var(--blue);
+  }
+  
+  .character-data p {
+    margin: 5px 0;
+    color: var(--calla-green);
+  }
+  
+  /* Estilo para el campo de búsqueda */
+  input[type="text"] {
+    width: 100%;
+    max-width: 600px; /* Aumenta el ancho máximo según lo que desees */
+    padding: 10px;
+    margin: 20px auto; /* Cambia a auto para centrarlo */
+    display: block; /* Asegúrate de que sea un bloque para aplicar auto margenes */
+    border: 2px solid var(--cream);
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    background-color: var(--mystery-gray);
+    color: var(--blue);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s, border-color 0.2s;
+  }
+  
+  input[type="text"]::placeholder {
+    color: var(--endo-green);
+  }
+  
+  input[type="text"]:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: var(--kiwi-green);
+  }
+  
+  .character-details-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .character-details {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+  
+  .close-button:hover {
+    color: #ff4d4d; /* Cambia a rojo al pasar el mouse */
+  }
+  
+  .character-detail-img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  } 
+  
+  #background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el video para cubrir toda la pantalla */
+    z-index: -1; /* Asegura que el video esté detrás del contenido */
+  }
+  
+  /* Opcional: para oscurecer un poco el video de fondo */
+  #background-video::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Ajusta la opacidad según prefieras */
+  }
+  
+  /* Ajuste del contenido para que se vea encima del video */
+  .content {
+    position: relative;
+    z-index: 1; /* Coloca el contenido delante del video */
+    padding: 20px;
+    color: white; /* Cambia el color del texto para mejorar la legibilidad */
+  }
+  
+  .status-icon {
+    display: inline-block;
+    width: 10px; /* Ajusta el tamaño del ícono */
+    height: 10px; /* Ajusta el tamaño del ícono */
+    border-radius: 50%; /* Para hacer el ícono redondo */
+    margin-left: 5px; /* Espacio entre el texto y el ícono */
+  }
+  
+  .alive {
+    background-color: green; /* Verde para alive */
+  }
+  
+  .unknown {
+    background-color: gray; /* Plomo para unknown */
+  }
+  
+  .dead {
+    background-color: red; /* Rojo para dead */
+  }
+  

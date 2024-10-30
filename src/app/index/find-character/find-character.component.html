@@ -1,0 +1,48 @@
+<div class="search-container">
+  <input 
+      type="text" 
+      placeholder="Buscar personajes por nombre o ID..." 
+      [(ngModel)]="searchTerm" 
+  />
+  <button (click)="searchCharacters()" class="search-button">Buscar</button>
+</div>
+
+<ul class="characters">
+  <li 
+    *ngFor="let character of characters" 
+    class="character" 
+    (click)="selectCharacter(character)"
+  >
+    <img class="character-img" [src]="character.image" [alt]="character.name" />
+    <div class="character-data">
+      <h3>{{ character.name }}</h3>
+      <p>
+        Status: {{ character.status }} 
+        <span [ngClass]="{
+          'status-icon': true,
+          'alive': character.status === 'Alive',
+          'unknown': character.status === 'unknown',
+          'dead': character.status === 'Dead'
+        }"></span>
+      </p>
+      <p>Species: {{ character.species }}</p>
+    </div>
+  </li>
+</ul>
+
+<div class="character-details-modal" *ngIf="selectedCharacter">
+  <div class="character-details">
+    <button class="close-button" (click)="closeCharacterDetails()">✕</button>
+    <button class="download-button" (click)="downloadPDF()">Descargar información</button>
+    <img [src]="selectedCharacter.image" [alt]="selectedCharacter.name" class="character-detail-img" />
+    <h2>{{ selectedCharacter.name }}</h2>
+    <p>Status: {{ selectedCharacter.status }}</p>
+    <p>Species: {{ selectedCharacter.species }}</p>
+    <p>Type: {{ selectedCharacter.type || 'Unknown' }}</p>
+    <p>Gender: {{ selectedCharacter.gender }}</p>
+    <p>Number of Episodes: {{ selectedCharacter.episode.length }}</p>
+    <p>URL: <a [href]="selectedCharacter.url" target="_blank">{{ selectedCharacter.url }}</a></p>
+    <p>Created: {{ selectedCharacter.created | date: 'long' }}</p>
+  </div>
+</div>
+
