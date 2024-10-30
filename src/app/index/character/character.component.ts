@@ -7,7 +7,7 @@ import { jsPDF } from 'jspdf';
 @Component({
   selector: 'app-character',
   templateUrl: './character.component.html',
-  styleUrl: './character.component.css'
+  styleUrls: ['./character.component.css']  // Corregido a styleUrls
 })
 export class CharacterComponent implements OnInit {
   characters: Character[] = [];
@@ -36,6 +36,13 @@ export class CharacterComponent implements OnInit {
   searchCharacter() {
     if (this.searchTerm) {
       this.router.navigate(['/search'], { queryParams: { name: this.searchTerm } });
+    }
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.searchCharacter();
     }
   }
 

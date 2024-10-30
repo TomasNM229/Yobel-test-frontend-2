@@ -52,12 +52,26 @@
   color: var(--calla-green);
 }
 
+.search-container {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.search-container-inner {
+  display: flex;
+  align-items: center; /* Alinea los elementos verticalmente */
+}
+
+.input-container {
+  position: relative; /* Necesario para posicionar el ícono */
+}
+
 input[type="text"] {
   width: 100%;
   max-width: 600px;
-  padding: 10px;
-  margin: 20px auto;
-  display: block;
+  height: 40px; /* Aumenté la altura para que sea más coherente */
+  padding: 10px 40px; /* Espacio para el ícono */
+  margin: 20px 0; /* Solo margen vertical */
   border: 2px solid var(--cream);
   border-radius: 8px;
   font-size: 1em;
@@ -75,6 +89,15 @@ input[type="text"]::placeholder {
 input[type="text"]:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-color: var(--kiwi-green);
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px; /* Espacio desde el borde izquierdo */
+  top: 50%;
+  transform: translateY(-50%); /* Centra verticalmente el ícono */
+  color: var(--blue); /* Cambia el color según sea necesario */
+  pointer-events: none; /* Evita que el ícono interfiera con el clic en el input */
 }
 
 .character-details-modal {
@@ -118,7 +141,7 @@ input[type="text"]:focus {
   width: 100%;
   border-radius: 8px;
   margin-bottom: 15px;
-} 
+}
 
 #background-video {
   position: fixed;
@@ -130,7 +153,6 @@ input[type="text"]:focus {
   z-index: -1;
 }
 
-
 #background-video::after {
   content: "";
   position: absolute;
@@ -140,7 +162,6 @@ input[type="text"]:focus {
   height: 100%;
   background: rgba(0, 0, 0, 0.3);
 }
-
 
 .content {
   position: relative;

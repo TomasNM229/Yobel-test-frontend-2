@@ -1,10 +1,14 @@
 <div class="search-container">
-  <input 
-      type="text" 
-      placeholder="Buscar personajes por nombre o ID..." 
-      [(ngModel)]="searchTerm" 
-  />
-  <button (click)="searchCharacters()" class="search-button">Buscar</button>
+  <div class="search-container-inner">
+    <div class="input-container">
+      <i class="fas fa-search search-icon"></i>
+      <input 
+        type="text" 
+        placeholder="Buscar personajes..." 
+        [(ngModel)]="searchTerm" 
+      />
+    </div>
+  </div>
 </div>
 
 <ul class="characters">

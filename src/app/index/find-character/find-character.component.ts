@@ -1,5 +1,5 @@
 import { jsPDF } from 'jspdf';
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router'; // Importa Router
 import { IndexService } from './../service/index.service';
 import { Character } from '../interface/character';
@@ -84,6 +84,13 @@ export class FindCharacterComponent implements OnInit {
   }
   closeCharacterDetails() {
     this.selectedCharacter = null;
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.searchCharacters();
+    }
   }
   
   downloadPDF() {
