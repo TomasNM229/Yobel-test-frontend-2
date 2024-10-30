@@ -46,6 +46,8 @@
     <p>Type: {{ selectedCharacter.type || 'Unknown' }}</p>
     <p>Gender: {{ selectedCharacter.gender }}</p>
     <p>Number of Episodes: {{ selectedCharacter.episode.length }}</p>
+    <p>Origin: {{ selectedCharacter.origin.name }}</p>
+    <p>Location: {{ selectedCharacter.location.name }}</p>
     <p>URL: <a [href]="selectedCharacter.url" target="_blank">{{ selectedCharacter.url }}</a></p>
     <p>Created: {{ selectedCharacter.created | date: 'long' }}</p>
   </div>

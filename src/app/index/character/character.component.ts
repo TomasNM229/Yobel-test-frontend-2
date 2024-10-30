@@ -58,8 +58,10 @@ export class CharacterComponent implements OnInit {
     doc.text(`Type: ${character.type || 'Unknown'}`, 10, 40);
     doc.text(`Gender: ${character.gender}`, 10, 50);
     doc.text(`Number of Episodes: ${character.episode.length}`, 10, 60);
-    doc.text(`URL: ${character.url}`, 10, 70);
-    doc.text(`Created: ${new Date(character.created).toLocaleString()}`, 10, 80);
+    doc.text(`Origin: ${character.origin.name}`, 10, 70);
+    doc.text(`Location: ${character.location.name}`, 10, 80);
+    doc.text(`URL: ${character.url}`, 10, 90);
+    doc.text(`Created: ${new Date(character.created).toLocaleString()}`, 10, 100);
 
     doc.save(`${character.name}_details.pdf`);
   }
