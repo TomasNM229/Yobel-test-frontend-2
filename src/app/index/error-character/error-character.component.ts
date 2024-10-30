@@ -11,6 +11,6 @@ export class ErrorCharacterComponent {
   constructor(private router: Router) {}
 
   goHome() {
-    this.router.navigate(['/']); // Redirige a la ruta principal
+    this.router.navigate(['/']);
   }
 }

@@ -1,5 +1,3 @@
-
-/* Contenedor de los personajes */
 .characters {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -9,7 +7,6 @@
   margin: 0;
 }
 
-/* Estilo para cada tarjeta de personaje */
 .character {
   background-color: var(--mystery-gray);
   border: 2px solid var(--kiwi-green);
@@ -29,7 +26,6 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Imagen de cada personaje */
 .character-img {
   border: 2px solid var(--blue);
   border-radius: 50%;
@@ -39,7 +35,6 @@
   margin-bottom: 10px;
 }
 
-/* Datos del personaje */
 .character-data {
   display: flex;
   flex-direction: column;
@@ -57,13 +52,12 @@
   color: var(--calla-green);
 }
 
-/* Estilo para el campo de búsqueda */
 input[type="text"] {
   width: 100%;
-  max-width: 600px; /* Aumenta el ancho máximo según lo que desees */
+  max-width: 600px;
   padding: 10px;
-  margin: 20px auto; /* Cambia a auto para centrarlo */
-  display: block; /* Asegúrate de que sea un bloque para aplicar auto margenes */
+  margin: 20px auto;
+  display: block;
   border: 2px solid var(--cream);
   border-radius: 8px;
   font-size: 1em;
@@ -117,7 +111,7 @@ input[type="text"]:focus {
 }
 
 .close-button:hover {
-  color: #ff4d4d; /* Cambia a rojo al pasar el mouse */
+  color: #ff4d4d;
 }
 
 .character-detail-img {
@@ -132,11 +126,11 @@ input[type="text"]:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ajusta el video para cubrir toda la pantalla */
-  z-index: -1; /* Asegura que el video esté detrás del contenido */
+  object-fit: cover;
+  z-index: -1;
 }
 
-/* Opcional: para oscurecer un poco el video de fondo */
+
 #background-video::after {
   content: "";
   position: absolute;
@@ -144,35 +138,35 @@ input[type="text"]:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Ajusta la opacidad según prefieras */
+  background: rgba(0, 0, 0, 0.3);
 }
 
-/* Ajuste del contenido para que se vea encima del video */
+
 .content {
   position: relative;
-  z-index: 1; /* Coloca el contenido delante del video */
+  z-index: 1;
   padding: 20px;
-  color: white; /* Cambia el color del texto para mejorar la legibilidad */
+  color: white;
 }
 
 .status-icon {
   display: inline-block;
-  width: 10px; /* Ajusta el tamaño del ícono */
-  height: 10px; /* Ajusta el tamaño del ícono */
-  border-radius: 50%; /* Para hacer el ícono redondo */
-  margin-left: 5px; /* Espacio entre el texto y el ícono */
+  width: 10px; 
+  height: 10px; 
+  border-radius: 50%; 
+  margin-left: 5px;
 }
 
 .alive {
-  background-color: green; /* Verde para alive */
+  background-color: green;
 }
 
 .unknown {
-  background-color: gray; /* Plomo para unknown */
+  background-color: gray; 
 }
 
 .dead {
-  background-color: red; /* Rojo para dead */
+  background-color: red;
 }
 
 .download-button {

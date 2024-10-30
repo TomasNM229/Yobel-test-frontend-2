@@ -4,11 +4,11 @@
   }
   
   .error-container h2 {
-    color: #ff4d4d; /* Color rojo para el mensaje de error */
+    color: #ff4d4d;
   }
   
   .btn-home {
-    background-color: #007bff; /* Color azul para el botón */
+    background-color: #007bff;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -22,6 +22,6 @@
   }
   
   .btn-home:hover {
-    background-color: #0056b3; /* Color más oscuro al pasar el ratón */
+    background-color: #0056b3;
   }
   

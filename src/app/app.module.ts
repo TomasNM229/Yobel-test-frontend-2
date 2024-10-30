@@ -8,15 +8,19 @@ import { CharacterComponent } from './index/character/character.component';
 import { FindCharacterComponent } from './index/find-character/find-character.component';
 import { ErrorCharacterComponent } from './index/error-character/error-character.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TestComponent } from './test/test.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],
